@@ -3,6 +3,9 @@
   <head>
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600&display=swap" rel="stylesheet">
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Vanilla App Template</title>
     <link rel="stylesheet" href="./css/styles.css" />
@@ -10,10 +13,15 @@
   <body>
     <load ="partials/header.html" />
     <section>
-      <input type="text">
-      <button></button>
-      <ul class="list"></ul>
+      <form action="#" class="form">
+        <input type="text" class="input input-js" placeholder="Search images...">
+        <button class="button btn-js">Search</button>
+      </form>
+
+      <ul class="gallery gallery-js"></ul>
     </section>
     <script type="module" src="./main.js"></script>
   </body>
 </html>
+
+
