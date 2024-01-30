@@ -3,11 +3,16 @@
   <head>
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/goit-js-hw-11/favicon.svg" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600&display=swap" rel="stylesheet">
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Vanilla App Template</title>
     
     <script type="module" crossorigin src="/goit-js-hw-11/commonHelpers.js"></script>
-    <link rel="stylesheet" href="/goit-js-hw-11/assets/index-5dfd6f93.css">
+    <link rel="modulepreload" crossorigin href="/goit-js-hw-11/assets/vendor-46aac873.js">
+    <link rel="stylesheet" href="/goit-js-hw-11/assets/vendor-eb6030bc.css">
+    <link rel="stylesheet" href="/goit-js-hw-11/assets/index-f3c0e60a.css">
   </head>
   <body>
     <!-- <header class="header">
@@ -22,10 +27,15 @@
 </header> -->
 
     <section>
-      <input type="text">
-      <button></button>
-      <ul class="list"></ul>
+      <form action="#" class="form">
+        <input type="text" class="input input-js" placeholder="Search images...">
+        <button class="button btn-js">Search</button>
+      </form>
+
+      <ul class="gallery gallery-js"></ul>
     </section>
     
   </body>
 </html>
+
+
