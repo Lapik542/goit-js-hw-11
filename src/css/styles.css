@@ -23,6 +23,12 @@
   -webkit-text-size-adjust: 100%;
 }
 
+.form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 .input {
   padding: 8px 118px 8px 16px;
   border-radius: 4px;
@@ -89,7 +95,8 @@ letter-spacing: 0.64px;
 }
 
 .gallery-item {
-  margin: 10px;
+  margin: 34px 24px 24px 0px;
+  border: 1px solid #808080;
 }
 
 .gallery-link {
@@ -110,7 +117,7 @@ letter-spacing: 0.64px;
 .photo-list {
   display: flex;
   gap: 32px;
-  margin-top: 4px;
+  margin-top: 10px;
 }
 
 .photo-list-value {
