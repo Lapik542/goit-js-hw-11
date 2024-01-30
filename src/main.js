@@ -22,13 +22,22 @@ form.addEventListener("submit", (eve) => {
         if (!res.ok) {
             iziToast.error({
                 title: 'Error',
-                message: error.message
+                message: res?.error?.message || "Sorry, there are no images matching your search query. Please try again!"
             });
             loader.style.display = 'none';
+            return
         }
         return res.json();
     })
     .then(data => {
+         if (!data?.hits?.length) {
+            iziToast.error({
+                title: 'Error',
+                message: "Sorry, there are no images matching your search query. Please try again!"
+            });
+            loader.style.display = 'none';
+            return []
+        }
         gallery.innerHTML = data.hits.reduce((html, image) => html + `
         <li class="gallery-item">
         <a class="gallery-link" href="${image.largeImageURL}">
