@@ -1,26 +1,26 @@
-import{i as c,S as u}from"./assets/vendor-46aac873.js";(function(){const l=document.createElement("link").relList;if(l&&l.supports&&l.supports("modulepreload"))return;for(const e of document.querySelectorAll('link[rel="modulepreload"]'))s(e);new MutationObserver(e=>{for(const t of e)if(t.type==="childList")for(const o of t.addedNodes)o.tagName==="LINK"&&o.rel==="modulepreload"&&s(o)}).observe(document,{childList:!0,subtree:!0});function a(e){const t={};return e.integrity&&(t.integrity=e.integrity),e.referrerpolicy&&(t.referrerPolicy=e.referrerpolicy),e.crossorigin==="use-credentials"?t.credentials="include":e.crossorigin==="anonymous"?t.credentials="omit":t.credentials="same-origin",t}function s(e){if(e.ep)return;e.ep=!0;const t=a(e);fetch(e.href,t)}})();const i=document.querySelector(".form"),p=document.querySelector(".gallery-js"),r=document.querySelector(".loader");r.style.display="none";i.addEventListener("submit",n=>{n.preventDefault();const l="42027351-38548a0814b7c6ae31d9c3419",a=i.querySelector(".input-js").value,s=`https://pixabay.com/api/?key=${l}&q=${a}&image_type=photo&orientation=horizontal&safesearch=true`;r.style.display="block",fetch(s).then(e=>(e.ok||(c.error({title:"Error",message:error.message}),r.style.display="none"),e.json())).then(e=>{p.innerHTML=e.hits.reduce((t,o)=>t+`
+import{i as c,S as p}from"./assets/vendor-46aac873.js";(function(){const r=document.createElement("link").relList;if(r&&r.supports&&r.supports("modulepreload"))return;for(const e of document.querySelectorAll('link[rel="modulepreload"]'))n(e);new MutationObserver(e=>{for(const o of e)if(o.type==="childList")for(const l of o.addedNodes)l.tagName==="LINK"&&l.rel==="modulepreload"&&n(l)}).observe(document,{childList:!0,subtree:!0});function i(e){const o={};return e.integrity&&(o.integrity=e.integrity),e.referrerpolicy&&(o.referrerPolicy=e.referrerpolicy),e.crossorigin==="use-credentials"?o.credentials="include":e.crossorigin==="anonymous"?o.credentials="omit":o.credentials="same-origin",o}function n(e){if(e.ep)return;e.ep=!0;const o=i(e);fetch(e.href,o)}})();const u=document.querySelector(".form"),h=document.querySelector(".gallery-js"),s=document.querySelector(".loader");s.style.display="none";u.addEventListener("submit",a=>{a.preventDefault();const r="42027351-38548a0814b7c6ae31d9c3419",i=u.querySelector(".input-js").value,n=`https://pixabay.com/api/?key=${r}&q=${i}&image_type=photo&orientation=horizontal&safesearch=true`;s.style.display="block",fetch(n).then(e=>{var o;if(!e.ok){c.error({title:"Error",message:((o=e==null?void 0:e.error)==null?void 0:o.message)||"Sorry, there are no images matching your search query. Please try again!"}),s.style.display="none";return}return e.json()}).then(e=>{var o;if(!((o=e==null?void 0:e.hits)!=null&&o.length))return c.error({title:"Error",message:"Sorry, there are no images matching your search query. Please try again!"}),s.style.display="none",[];h.innerHTML=e.hits.reduce((l,t)=>l+`
         <li class="gallery-item">
-        <a class="gallery-link" href="${o.largeImageURL}">
-            <img class="gallery-image" src="${o.webformatURL}" alt="${o.tags}" />
+        <a class="gallery-link" href="${t.largeImageURL}">
+            <img class="gallery-image" src="${t.webformatURL}" alt="${t.tags}" />
         </a>
         <ul class="photo-list">
             <li class="photo-list-value">
                 <h2 class="photo-name">Likes</h2>
-                <p class="photo-value">${o.likes}</p>
+                <p class="photo-value">${t.likes}</p>
             </li>
             <li>
                 <h2 class="photo-name">Views</h2>
-                <p class="photo-value">${o.views}</p>
+                <p class="photo-value">${t.views}</p>
             </li>
             <li>
                 <h2 class="photo-name">Comments</h2>
-                <p class="photo-value">${o.comments}</p>
+                <p class="photo-value">${t.comments}</p>
             </li>
             <li>
                 <h2 class="photo-name">Downloads</h2>
-                <p class="photo-value">${o.downloads}</p>
+                <p class="photo-value">${t.downloads}</p>
             </li>
         </ul>
     </li>
-        `,""),new u(".gallery a",{captionsData:"alt",captionDelay:250}),r.style.display="none"})});
+        `,""),new p(".gallery a",{captionsData:"alt",captionDelay:250}),s.style.display="none"})});
 //# sourceMappingURL=commonHelpers.js.map
